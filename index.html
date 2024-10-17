@@ -24,7 +24,6 @@
         }
         pre {
             background: #282c34;
-            padding: 15px;
             border-radius: 25px;
             overflow: auto;
             max-width: 600px;
@@ -41,12 +40,27 @@
 <body>
 
     <h1>Brew</h1>
-    <pre><code class="bash"># Brew пока что нет на PyPi.
-# Скачайте официально тут: <a href="https://brew.notype.ru/latest.zip>Latest Версия</a>
+    <a href="https://brew.notype.ru/latest.zip">Latest Версия</a>
+    <pre><code class="bash"># Brew пока нет на PyPi.
+# Скачайте архив Latest,
+# распакуйте и установите
+# используя pip install .
 
 # Использование
 brew install <i>package_name</i>
-brew uninstall <i>package_name</i></code></pre>
+brew uninstall <i>package_name</i>
+brew list</code></pre>
+    <pre><code class="python"># Также можно использовать в вашей .py программе.
+
+from brew import BrewManager
+manager = BrewManager()
+
+manager.install("example-package")
+manager.remove("example-package")
+
+print("Доступные пакеты:")
+for package, url in manager.list_packages():
+    print(f"{package}: {url}")</code></pre>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
