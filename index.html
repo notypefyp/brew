@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew - Менеджер пакетов</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-dark.min.css">
+    <style>
+        body {
+            background-color: #282c34;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 75px;
+            opacity: 0.75;
+        }
+        pre {
+            background: #282c34;
+            padding: 15px;
+            border-radius: 25px;
+            overflow: auto;
+            max-width: 600px;
+            width: 100%;
+        }
+        code {
+            font-size: 16px;
+        }
+        a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Brew</h1>
+    <pre><code class="bash"># Brew пока что нет на PyPi.
+# Скачайте официально тут: <a href="https://brew.notype.ru/latest.zip>Latest Версия</a>
+
+# Использование
+brew install <i>package_name</i>
+brew uninstall <i>package_name</i></code></pre>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
